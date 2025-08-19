@@ -1,0 +1,10 @@
+^D:\PROJECTS\IMAGE_CONVERTER\BUILD\CMAKEFILES\B5F670E72D7B5112B57567BF84A8CA78\GENERATE.STAMP.RULE
+setlocal
+D:\programs\Cmake\bin\cmake.exe -SD:/Projects/Image_converter -BD:/Projects/Image_converter/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Projects/Image_converter/build/Image_convert.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

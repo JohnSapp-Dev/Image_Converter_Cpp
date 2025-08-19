@@ -1,0 +1,10 @@
+^D:\PROJECTS\IMAGE_CONVERTER\CMAKELISTS.TXT
+setlocal
+D:\programs\Cmake\bin\cmake.exe -SD:/Projects/Image_converter -BD:/Projects/Image_converter/build --check-stamp-file D:/Projects/Image_converter/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
